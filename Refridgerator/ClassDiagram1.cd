@@ -1,23 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Refridgerator.Box">
-    <Position X="5.5" Y="1" Width="1.5" />
+    <Position X="4" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AIAAAAAMAAEAAQAAAAAAAAACAAAAAAAAAAAQAAAAAQA=</HashCode>
+      <HashCode>AIAAAAAMAAEAAQAAAAAAAAACAAAAAAQAAAAQAAAAAQA=</HashCode>
       <FileName>Box.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Refridgerator.Article">
-    <Position X="7.5" Y="1" Width="1.5" />
+    <Position X="5.75" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAEAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Article.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Refridgerator.Fridge">
-    <Position X="3.5" Y="1" Width="1.5" />
+    <Position X="2.25" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAIABAAAAFAACAECQAAAAQBAAAAI=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAIABAAAAAAACAECQAAAAQBEAAAI=</HashCode>
       <FileName>Fridge.cs</FileName>
     </TypeIdentifier>
   </Class>

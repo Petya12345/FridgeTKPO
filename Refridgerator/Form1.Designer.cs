@@ -104,9 +104,9 @@
             // 
             // boxButton6
             // 
-            this.boxButton6.Location = new System.Drawing.Point(254, 163);
+            this.boxButton6.Location = new System.Drawing.Point(224, 163);
             this.boxButton6.Name = "boxButton6";
-            this.boxButton6.Size = new System.Drawing.Size(87, 65);
+            this.boxButton6.Size = new System.Drawing.Size(147, 65);
             this.boxButton6.TabIndex = 6;
             this.boxButton6.Text = "6";
             this.boxButton6.UseVisualStyleBackColor = true;

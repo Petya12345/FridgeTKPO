@@ -34,10 +34,8 @@ namespace Refridgerator
         public void SetMaxTemperature(int boxNumber, int temperature) { }
         public void SetMinTemperature(int boxNumber, int temperature) { }
 
-        public void DefrostFridge() { }
+        public void DefrostBox(int boxNumber) { }
 
         private bool allBoxesEmpty() { throw new NotImplementedException(); }
-
-        private void defrost() { }
     }
 }

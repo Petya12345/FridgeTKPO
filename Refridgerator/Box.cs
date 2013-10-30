@@ -32,5 +32,7 @@ namespace Refridgerator
         {
             throw new NotImplementedException();
         }
+
+        public void Defrost() { }
     }
 }
