@@ -7,35 +7,60 @@ namespace Refridgerator
 {
     class Fridge
     {
-        public List<Box> Boxes = new List<Box>();
+        public List<Box> Boxes;
+
+        public Fridge(int boxesNumber)
+        {
+            Boxes = new List<Box>();
+            for (int i = 0; i < boxesNumber; i++ )
+            {
+                Boxes.Add(new Box());
+            }
+        }
 
         public void OpenBox(int boxNumber)
         {
+            Boxes.ElementAt(boxNumber).open();
         }
 
-        private void alarm(string message)
-        {
-        }
 
         public void CloseBox(int boxNumber)
         {
+            Boxes.ElementAt(boxNumber).close();
         }
 
-        public void PutInBox(int boxNumber, Article article) {}
+        public void PutInBox(int boxNumber, Article article)
+        {
+            Boxes.ElementAt(boxNumber).add(article);
+        }
+
+        public List<string> getAllArticleList()
+        {
+            List<string> articles = new List<string>();
+
+            //foreach
+            //getArticleListInBox
+
+            return articles;
+        }
+
+        public List<string> getArticleListInBox(int boxNumber)
+        {            
+            return Boxes.ElementAt(boxNumber).getArticleTitles();
+        }
 
         public Article GetFromBox(int boxNumber, string barcode) 
-        { throw new NotImplementedException(); }
-
-        public IEnumerable<Article> GetList(int boxNumber = 0)
         {
-            throw new NotImplementedException();
+
+            Article article = Boxes.ElementAt(boxNumber).remove(barcode);
+            throw new NotImplementedException(); 
         }
 
-        public void SetMaxTemperature(int boxNumber, int temperature) { }
-        public void SetMinTemperature(int boxNumber, int temperature) { }
 
-        public void DefrostBox(int boxNumber) { }
+        public void SetTemperature(int boxNumber, int minTemperature, int maxTemperature) { }
 
-        private bool allBoxesEmpty() { throw new NotImplementedException(); }
+        public void DefrostBox(int boxNumber) {
+            Boxes.ElementAt(boxNumber).Defrost();
+        }
     }
 }
