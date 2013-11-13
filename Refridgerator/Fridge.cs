@@ -38,8 +38,13 @@ namespace Refridgerator
         {
             List<string> articles = new List<string>();
 
-            //foreach
-            //getArticleListInBox
+            foreach (Box b in Boxes) //index?
+            {
+                foreach (string a in getArticleListInBox(Boxes.IndexOf(b)))
+                {
+                    articles.Add(a);
+                }
+            }
 
             return articles;
         }

@@ -14,14 +14,14 @@ namespace Refridgerator
         public float maxTemperature { get; set; }
         System.Timers.Timer boxOpenTimer;
         System.Timers.Timer checkingTimer;
-        private float currentTemperature { get; set;}
-        private Engine engine;
+        private float currentTemperature { get; set; }
+        //private Engine engine;
 
         public Box()
         {
             boxOpenTimer = new System.Timers.Timer();
             boxOpenTimer.Elapsed += new ElapsedEventHandler(OnOpenedDoor);
-            boxOpenTimer.Interval = 120*000; //CONST
+            boxOpenTimer.Interval = 120 * 1000; //CONST
 
 
             System.Timers.Timer temperatureUp = new System.Timers.Timer();
@@ -34,14 +34,24 @@ namespace Refridgerator
             checkingTimer.Elapsed += new ElapsedEventHandler(OnCheck);
             checkingTimer.Interval = 10 * 1000;//CONST
 
-            //create engine
-            //and pass ref to box 
-            //current = 20
-            //min, max - default
+
+            //engine = new Engine(this);
+
+
+            minTemperature = -10;
+            maxTemperature = -1;
+            currentTemperature = 5;
         }
         private void OnCheck(object source, ElapsedEventArgs e)
         {
-           //check current > max (engine.startFreezung) or current < min (stopFreezung)
+            if (currentTemperature > maxTemperature)
+            {
+                //engine.startFreezung();
+            }
+            else if (currentTemperature < minTemperature)
+            {
+                //engine.stopFreezung();
+            }
         }
 
         private void OnOpenedDoor(object source, ElapsedEventArgs e)
@@ -51,18 +61,23 @@ namespace Refridgerator
 
         private void OnTemperatureUp(object source, ElapsedEventArgs e)
         {
-            //currentTemperature += 0.8;
+            currentTemperature += (float)0.8;
         }
 
         public List<string> getArticleTitles()
         {
-            //итерирую по всем артиклам и возвращаю список
+            List<string> list = new List<string>();
+            foreach (Article a in Articles)
+            {
+                list.Add(a.Title);
+            }
             return null;
         }
 
         public void add(Article article)
         {
-            //b -> b, a -> a
+            Barcodes.Add(article.Barcode);
+            Articles.Add(article);
         }
 
         public Article remove(string barcode)
@@ -70,14 +85,7 @@ namespace Refridgerator
 
             return null;
         }
-        
-        public void StartMonitoring() 
-        { 
-            //проверка таймера дверцы
-            //проверка температуры и регилировка вентилятора
-            //цикл бесконечный поставить? 
-        }
-       
+
         public void open()
         {
             boxOpenTimer.Start();
@@ -103,12 +111,12 @@ namespace Refridgerator
             throw new NotImplementedException();
         }
 
-        public void Defrost() 
+        public void Defrost()
         {
             checkingTimer.Stop();
         }
 
-        private void alarm(string message)  { }
+        private void alarm(string message) { }
 
         private bool isBoxEmpty() { throw new NotImplementedException(); }
     }
