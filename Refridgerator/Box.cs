@@ -21,7 +21,7 @@ namespace Refridgerator
         {
             boxOpenTimer = new System.Timers.Timer();
             boxOpenTimer.Elapsed += new ElapsedEventHandler(OnOpenedDoor);
-            boxOpenTimer.Interval = 120 * 1000; //CONST
+            boxOpenTimer.Interval = 6 * 1000; //CONST
 
 
             System.Timers.Timer temperatureUp = new System.Timers.Timer();
@@ -41,6 +41,7 @@ namespace Refridgerator
             minTemperature = -10;
             maxTemperature = -1;
             currentTemperature = 5;
+
         }
         private void OnCheck(object source, ElapsedEventArgs e)
         {
@@ -64,14 +65,9 @@ namespace Refridgerator
             currentTemperature += (float)0.8;
         }
 
-        public List<string> getArticleTitles()
+        public List<Article> getArticles()
         {
-            List<string> list = new List<string>();
-            foreach (Article a in Articles)
-            {
-                list.Add(a.Title);
-            }
-            return null;
+            return Articles;
         }
 
         public void add(Article article)

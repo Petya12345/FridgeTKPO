@@ -50,10 +50,10 @@ namespace Refridgerator
 
         private void listAllProducts_Click(object sender, EventArgs e)
         {
-            IEnumerable<Article> articles = new Article[] { 
-                new Article() { Barcode="123", Title="product1" },
-                new Article() { Barcode="456", Title="second product" }
-            }; //fridge.GetList();
+            var articles = fridge.getAllArticleList();
+            var productListForm = new ProductsListForm();
+            productListForm.DataBindItems(articles);
+            productListForm.Show();
         }
     }
 }
