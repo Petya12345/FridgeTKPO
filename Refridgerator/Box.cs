@@ -71,13 +71,6 @@ namespace Refridgerator
             return null;
         }
         
-        public void StartMonitoring() 
-        { 
-            //проверка таймера дверцы
-            //проверка температуры и регилировка вентилятора
-            //цикл бесконечный поставить? 
-        }
-       
         public void open()
         {
             boxOpenTimer.Start();
