@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Timers;
+using System.Windows.Forms;
 
 namespace Refridgerator
 {
@@ -112,7 +113,10 @@ namespace Refridgerator
             checkingTimer.Stop();
         }
 
-        private void alarm(string message) { }
+        private void alarm(string message) 
+        {
+            MessageBox.Show(message);
+        }
 
         private bool isBoxEmpty() { throw new NotImplementedException(); }
     }
