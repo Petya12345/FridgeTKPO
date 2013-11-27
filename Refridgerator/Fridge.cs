@@ -55,7 +55,7 @@ namespace Refridgerator
         {
 
             Article article = Boxes.ElementAt(boxNumber).Remove(barcode);
-            throw new NotImplementedException(); 
+            return article;
         }
 
 

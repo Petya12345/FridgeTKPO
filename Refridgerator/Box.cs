@@ -39,7 +39,7 @@ namespace Refridgerator
             engine = new Engine(this);
 
 
-            minTemperature = -10;
+            minTemperature = -20;
             maxTemperature = -1;
             currentTemperature = 5;
 

@@ -15,7 +15,7 @@ namespace Refridgerator
         {
             box = boxRef;
             freezingTimer.Elapsed += new ElapsedEventHandler(lowerTemperature);
-            freezingTimer.Interval = 10 * 1000;//CONST
+            freezingTimer.Interval = 6 * 1000;//CONST
         }
 
         private void lowerTemperature(object source, ElapsedEventArgs e)
@@ -25,12 +25,12 @@ namespace Refridgerator
 
         public void startFreezung()
         {
-            box.currentTemperature -= 3;
+            freezingTimer.Stop();
         }
 
         public void stopFreezung()
         {
-
+            freezingTimer.Start();
         }
 
     }
