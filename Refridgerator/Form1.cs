@@ -73,7 +73,8 @@ namespace Refridgerator
             if (button != null)
             {
                 var boxNumber = Convert.ToInt32(button.Tag);
-                
+                var form = new BarcodeForm(fridge, boxNumber);
+                form.ShowDialog();
             }
         }
     }
