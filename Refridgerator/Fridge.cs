@@ -34,19 +34,21 @@ namespace Refridgerator
             Boxes.ElementAt(boxNumber).add(article);
         }
 
-        public List<string> getAllArticleList()
+        public IEnumerable<Article> getAllArticleList()
         {
-            List<string> articles = new List<string>();
-
-            //foreach
-            //getArticleListInBox
-
-            return articles;
+            for (int i = 0; i < Boxes.Count; i++)
+            {
+                var articlesInBox = getArticleListInBox(i);
+                foreach (var article in articlesInBox)
+                {
+                    yield return article;
+                }
+            }
         }
 
-        public List<string> getArticleListInBox(int boxNumber)
+        public List<Article> getArticleListInBox(int boxNumber)
         {            
-            return Boxes.ElementAt(boxNumber).getArticleTitles();
+            return Boxes.ElementAt(boxNumber).getArticles();
         }
 
         public Article GetFromBox(int boxNumber, string barcode) 

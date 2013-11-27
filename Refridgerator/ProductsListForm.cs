@@ -18,7 +18,10 @@ namespace Refridgerator
 
         public void DataBindItems(IEnumerable<Article> items)
         {
-
+            foreach (var item in items)
+            {
+                listBox1.Items.Add(item.Title);
+            }
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)

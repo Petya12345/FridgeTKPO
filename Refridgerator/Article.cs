@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Refridgerator
 {
-    class Article
+    public class Article
     {
         public string Title { get; set; }
         public string Barcode { get; set; }
