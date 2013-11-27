@@ -28,17 +28,18 @@ namespace Refridgerator
             if (button != null)
             {
                 var boxNumber = Convert.ToInt32(button.Tag);
-                if (button.Width == 15) // open 
+                if (button.Width == 15) // it is open now
                 {
                     button.Width = 95;
                     button.Text = boxNumber.ToString();
-                    //fridge.OpenBox(boxNumber);
+                    fridge.CloseBox(boxNumber);
                 }
                 else
                 {
                     button.Width = 15;
                     button.Text = "X";
-                    //fridge.CloseBox(boxNumber);
+                    fridge.OpenBox(boxNumber);
+
                 }
             }
         }

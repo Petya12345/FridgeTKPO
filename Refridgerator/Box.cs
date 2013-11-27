@@ -17,7 +17,6 @@ namespace Refridgerator
         System.Timers.Timer checkingTimer;
         public float currentTemperature { get; set; }
         private Engine engine;
-        public System.Timers.Timer BoxOpenTimer;
 
         public Box()
         {
@@ -26,9 +25,9 @@ namespace Refridgerator
             const int CHECK_TEMP = 10;
 
 
-            BoxOpenTimer = new System.Timers.Timer();
-            BoxOpenTimer.Elapsed += new ElapsedEventHandler(onOpenedDoor);
-            BoxOpenTimer.Interval = CHECK_OPENED_DOOR * 1000; //CONST
+            boxOpenTimer = new System.Timers.Timer();
+            boxOpenTimer.Elapsed += new ElapsedEventHandler(onOpenedDoor);
+            boxOpenTimer.Interval = CHECK_OPENED_DOOR * 1000; //CONST
 
 
             System.Timers.Timer temperatureUp = new System.Timers.Timer();
