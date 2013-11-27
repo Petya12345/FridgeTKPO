@@ -55,5 +55,26 @@ namespace Refridgerator
             productListForm.DataBindItems(articles);
             productListForm.Show();
         }
+
+        private void boxPlusButton1_Click(object sender, EventArgs e)
+        {
+            var button = sender as Button;
+            if (button != null)
+            {
+                var boxNumber = Convert.ToInt32(button.Tag);
+                var form = new ArticleForm(fridge, boxNumber);
+                form.ShowDialog();
+            }
+        }
+
+        private void boxMinusButton1_Click(object sender, EventArgs e)
+        {
+            var button = sender as Button;
+            if (button != null)
+            {
+                var boxNumber = Convert.ToInt32(button.Tag);
+                
+            }
+        }
     }
 }
