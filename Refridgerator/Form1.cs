@@ -91,5 +91,15 @@ namespace Refridgerator
                 productListForm.Show();
             }
         }
+
+        private void defrostButton1_Click(object sender, EventArgs e)
+        {
+            var button = sender as Button;
+            if (button != null)
+            {
+                var boxNumber = Convert.ToInt32(button.Tag);
+                fridge.DefrostBox(boxNumber);
+            }
+        }
     }
 }

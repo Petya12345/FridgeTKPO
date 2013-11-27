@@ -33,7 +33,7 @@
             this.listAllProducts = new System.Windows.Forms.Button();
             this.listBoxButton1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.defrostButton1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -111,14 +111,16 @@
             this.button4.Text = "t";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // defrostButton1
             // 
-            this.button5.Location = new System.Drawing.Point(106, 60);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(39, 26);
-            this.button5.TabIndex = 17;
-            this.button5.Text = "Def.";
-            this.button5.UseVisualStyleBackColor = true;
+            this.defrostButton1.Location = new System.Drawing.Point(106, 60);
+            this.defrostButton1.Name = "defrostButton1";
+            this.defrostButton1.Size = new System.Drawing.Size(39, 26);
+            this.defrostButton1.TabIndex = 17;
+            this.defrostButton1.Tag = "1";
+            this.defrostButton1.Text = "Def.";
+            this.defrostButton1.UseVisualStyleBackColor = true;
+            this.defrostButton1.Click += new System.EventHandler(this.defrostButton1_Click);
             // 
             // pictureBox1
             // 
@@ -135,8 +137,10 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(39, 26);
             this.button6.TabIndex = 21;
+            this.button6.Tag = "2";
             this.button6.Text = "Def.";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.defrostButton1_Click);
             // 
             // button7
             // 
@@ -175,8 +179,10 @@
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(39, 26);
             this.button10.TabIndex = 25;
+            this.button10.Tag = "3";
             this.button10.Text = "Def.";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.defrostButton1_Click);
             // 
             // button11
             // 
@@ -215,8 +221,10 @@
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(39, 26);
             this.button14.TabIndex = 29;
+            this.button14.Tag = "4";
             this.button14.Text = "Def.";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.defrostButton1_Click);
             // 
             // button15
             // 
@@ -255,8 +263,10 @@
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(39, 26);
             this.button18.TabIndex = 33;
+            this.button18.Tag = "5";
             this.button18.Text = "Def.";
             this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.defrostButton1_Click);
             // 
             // button19
             // 
@@ -295,8 +305,10 @@
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(39, 26);
             this.button22.TabIndex = 37;
+            this.button22.Tag = "6";
             this.button22.Text = "Def.";
             this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.defrostButton1_Click);
             // 
             // button23
             // 
@@ -505,7 +517,7 @@
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button8);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.defrostButton1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.listBoxButton1);
             this.Controls.Add(this.listAllProducts);
@@ -526,7 +538,7 @@
         private System.Windows.Forms.Button listAllProducts;
         private System.Windows.Forms.Button listBoxButton1;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button defrostButton1;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
