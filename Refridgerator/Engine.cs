@@ -11,7 +11,7 @@ namespace Refridgerator
         private System.Timers.Timer freezingTimer = new System.Timers.Timer();
         private Box box;
 
-        public Engine(ref Box boxRef)
+        public Engine(Box boxRef)
         {
             box = boxRef;
             freezingTimer.Elapsed += new ElapsedEventHandler(lowerTemperature);
@@ -20,17 +20,17 @@ namespace Refridgerator
 
         private void lowerTemperature(object source, ElapsedEventArgs e)
         {
-            //box.currentTemperature--; 
+            box.currentTemperature--; 
         }
 
-        public void startFreezng()
+        public void startFreezung()
         {
-            //timer.start();
+            box.currentTemperature -= 3;
         }
 
         public void stopFreezung()
         {
-            //timerStop();
+
         }
 
     }

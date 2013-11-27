@@ -20,18 +20,18 @@ namespace Refridgerator
 
         public void OpenBox(int boxNumber)
         {
-            Boxes.ElementAt(boxNumber).open();
+            Boxes.ElementAt(boxNumber).Open();
         }
 
 
         public void CloseBox(int boxNumber)
         {
-            Boxes.ElementAt(boxNumber).close();
+            Boxes.ElementAt(boxNumber).Close();
         }
 
         public void PutInBox(int boxNumber, Article article)
         {
-            Boxes.ElementAt(boxNumber).add(article);
+            Boxes.ElementAt(boxNumber).Add(article);
         }
 
         public IEnumerable<Article> getAllArticleList()
@@ -48,13 +48,13 @@ namespace Refridgerator
 
         public List<Article> getArticleListInBox(int boxNumber)
         {            
-            return Boxes.ElementAt(boxNumber).getArticles();
+            return Boxes.ElementAt(boxNumber).GetArticles();
         }
 
         public Article GetFromBox(int boxNumber, string barcode) 
         {
 
-            Article article = Boxes.ElementAt(boxNumber).remove(barcode);
+            Article article = Boxes.ElementAt(boxNumber).Remove(barcode);
             throw new NotImplementedException(); 
         }
 
