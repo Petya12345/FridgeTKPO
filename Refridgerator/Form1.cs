@@ -77,5 +77,18 @@ namespace Refridgerator
                 form.ShowDialog();
             }
         }
+
+        private void listBoxButton1_Click(object sender, EventArgs e)
+        {
+            var button = sender as Button;
+            if (button != null)
+            {
+                var boxNumber = Convert.ToInt32(button.Tag);
+                var articles = fridge.getArticleListInBox(boxNumber);
+                var productListForm = new ProductsListForm();
+                productListForm.DataBindItems(articles);
+                productListForm.Show();
+            }
+        }
     }
 }

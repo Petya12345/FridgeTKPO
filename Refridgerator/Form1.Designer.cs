@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.boxButton1 = new System.Windows.Forms.Button();
             this.listAllProducts = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.listBoxButton1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -91,14 +91,16 @@
             this.listAllProducts.UseVisualStyleBackColor = true;
             this.listAllProducts.Click += new System.EventHandler(this.listAllProducts_Click);
             // 
-            // button3
+            // listBoxButton1
             // 
-            this.button3.Location = new System.Drawing.Point(106, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(39, 26);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "List";
-            this.button3.UseVisualStyleBackColor = true;
+            this.listBoxButton1.Location = new System.Drawing.Point(106, 12);
+            this.listBoxButton1.Name = "listBoxButton1";
+            this.listBoxButton1.Size = new System.Drawing.Size(39, 26);
+            this.listBoxButton1.TabIndex = 15;
+            this.listBoxButton1.Tag = "1";
+            this.listBoxButton1.Text = "List";
+            this.listBoxButton1.UseVisualStyleBackColor = true;
+            this.listBoxButton1.Click += new System.EventHandler(this.listBoxButton1_Click);
             // 
             // button4
             // 
@@ -151,8 +153,10 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(39, 26);
             this.button8.TabIndex = 19;
+            this.button8.Tag = "2";
             this.button8.Text = "List";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.listBoxButton1_Click);
             // 
             // button9
             // 
@@ -189,8 +193,10 @@
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(39, 26);
             this.button12.TabIndex = 23;
+            this.button12.Tag = "3";
             this.button12.Text = "List";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.listBoxButton1_Click);
             // 
             // button13
             // 
@@ -227,8 +233,10 @@
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(39, 26);
             this.button16.TabIndex = 27;
+            this.button16.Tag = "4";
             this.button16.Text = "List";
             this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.listBoxButton1_Click);
             // 
             // button17
             // 
@@ -265,8 +273,10 @@
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(39, 26);
             this.button20.TabIndex = 31;
+            this.button20.Tag = "5";
             this.button20.Text = "List";
             this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.listBoxButton1_Click);
             // 
             // button21
             // 
@@ -303,8 +313,10 @@
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(39, 26);
             this.button24.TabIndex = 35;
+            this.button24.Tag = "6";
             this.button24.Text = "List";
             this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.listBoxButton1_Click);
             // 
             // button25
             // 
@@ -495,7 +507,7 @@
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.listBoxButton1);
             this.Controls.Add(this.listAllProducts);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -512,7 +524,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button boxButton1;
         private System.Windows.Forms.Button listAllProducts;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button listBoxButton1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
