@@ -20,20 +20,25 @@ namespace Refridgerator
 
         public Box()
         {
+            const int CHECK_OPENED_DOOR = 6;
+            const int NORMAL_TEMP_INCREASES = 2;
+            const int CHECK_TEMP = 10;
+
+
             boxOpenTimer = new System.Timers.Timer();
             boxOpenTimer.Elapsed += new ElapsedEventHandler(onOpenedDoor);
-            boxOpenTimer.Interval = 6 * 1000; //CONST
+            boxOpenTimer.Interval = CHECK_OPENED_DOOR * 1000; //CONST
 
 
             System.Timers.Timer temperatureUp = new System.Timers.Timer();
             temperatureUp.Elapsed += new ElapsedEventHandler(onTemperatureUp);
-            temperatureUp.Interval = 2 * 1000;//CONST
+            temperatureUp.Interval = NORMAL_TEMP_INCREASES * 1000;//CONST
             temperatureUp.Start();
 
 
             checkingTimer = new System.Timers.Timer();
             checkingTimer.Elapsed += new ElapsedEventHandler(onCheck);
-            checkingTimer.Interval = 10 * 1000;//CONST
+            checkingTimer.Interval = CHECK_TEMP * 1000;//CONST
 
 
             engine = new Engine(this);
@@ -83,6 +88,7 @@ namespace Refridgerator
             {
                 if (a.Barcode == barcode)
                 {
+                    Articles.Remove(a);
                     return a;
                 }
             }

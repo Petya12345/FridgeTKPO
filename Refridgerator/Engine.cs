@@ -13,9 +13,11 @@ namespace Refridgerator
 
         public Engine(Box boxRef)
         {
+            const int LOWER_TEMP = 5;
+
             box = boxRef;
             freezingTimer.Elapsed += new ElapsedEventHandler(lowerTemperature);
-            freezingTimer.Interval = 6 * 1000;//CONST
+            freezingTimer.Interval = LOWER_TEMP * 1000;//CONST
         }
 
         private void lowerTemperature(object source, ElapsedEventArgs e)
