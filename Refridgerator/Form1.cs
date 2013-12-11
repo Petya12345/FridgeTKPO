@@ -32,13 +32,13 @@ namespace Refridgerator
                 {
                     button.Width = 95;
                     button.Text = boxNumber.ToString();
-                    fridge.CloseBox(boxNumber);
+                    fridge.CloseBox(boxNumber - 1);
                 }
                 else
                 {
                     button.Width = 15;
                     button.Text = "X";
-                    fridge.OpenBox(boxNumber);
+                    fridge.OpenBox(boxNumber - 1);
 
                 }
             }
@@ -98,7 +98,7 @@ namespace Refridgerator
             if (button != null)
             {
                 var boxNumber = Convert.ToInt32(button.Tag);
-                fridge.DefrostBox(boxNumber);
+                fridge.DefrostBox(boxNumber - 1);
             }
         }
     }
