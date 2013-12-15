@@ -115,7 +115,10 @@ namespace Refridgerator
 
         public void Defrost()
         {
-            checkingTimer.Stop();
+            if (isBoxEmpty())
+                checkingTimer.Stop();
+            else
+                MessageBox.Show("Сначала выньте все продукты из холодильника!");
         }
 
 
@@ -130,6 +133,12 @@ namespace Refridgerator
             MessageBox.Show(message);
         }
 
-        private bool isBoxEmpty() { throw new NotImplementedException(); }
+        private bool isBoxEmpty() 
+        {
+            if (this.GetArticles().Count() > 0)
+                return false;
+
+            return true;
+        }
     }
 }
