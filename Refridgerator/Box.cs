@@ -118,7 +118,7 @@ namespace Refridgerator
             if (isBoxEmpty())
                 checkingTimer.Stop();
             else
-                MessageBox.Show("Сначала выньте все продукты из холодильника!");
+                alarm("Сначала выньте все продукты из холодильника!");
         }
 
 
