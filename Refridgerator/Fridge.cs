@@ -59,8 +59,8 @@ namespace Refridgerator
         }
 
 
-        public void SetTemperature(int boxNumber, int minTemperature, int maxTemperature) { 
-        
+        public void SetTemperature(int boxNumber, int minTemperature, int maxTemperature) {
+            Boxes.ElementAt(boxNumber).SetTemperature(minTemperature, maxTemperature);
         }
 
         public void DefrostBox(int boxNumber) {

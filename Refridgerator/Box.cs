@@ -11,16 +11,16 @@ namespace Refridgerator
     {
         public List<Article> Articles = new List<Article>();
         public List<string> Barcodes = new List<string>();
-        public float minTemperature { get; set; }
-        public float maxTemperature { get; set; }
+        public int minTemperature { get; set; }
+        public int maxTemperature { get; set; }
         System.Timers.Timer boxOpenTimer;
         System.Timers.Timer checkingTimer;
-        public float currentTemperature { get; set; }
+        public int currentTemperature { get; set; }
         private Engine engine;
 
         public Box()
         {
-            const int CHECK_OPENED_DOOR = 6;
+            const int CHECK_OPENED_DOOR = 120;
             const int NORMAL_TEMP_INCREASES = 2;
             const int CHECK_TEMP = 10;
 
@@ -69,7 +69,7 @@ namespace Refridgerator
 
         private void onTemperatureUp(object source, ElapsedEventArgs e)
         {
-            currentTemperature += (float)0.8;
+            currentTemperature += 1;
         }
 
         public List<Article> GetArticles()
@@ -116,6 +116,13 @@ namespace Refridgerator
         public void Defrost()
         {
             checkingTimer.Stop();
+        }
+
+
+        public void SetTemperature(int min, int max)
+        {
+            this.minTemperature = min;
+            this.maxTemperature = max;
         }
 
         private void alarm(string message) 
