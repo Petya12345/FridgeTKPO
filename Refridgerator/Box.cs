@@ -109,7 +109,7 @@ namespace Refridgerator
 
         private int getTemperature()
         {
-            throw new NotImplementedException();
+            return currentTemperature;
         }
 
 
