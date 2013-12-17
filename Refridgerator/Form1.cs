@@ -19,7 +19,7 @@ namespace Refridgerator
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            fridge = new Fridge(6);
+            fridge = new Fridge(7);
         }
 
         private void CameraButton_Click(object sender, EventArgs e)
