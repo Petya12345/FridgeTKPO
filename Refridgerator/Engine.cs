@@ -22,17 +22,17 @@ namespace Refridgerator
 
         private void lowerTemperature(object source, ElapsedEventArgs e)
         {
-            box.currentTemperature--; 
+            box.currentTemperature-=5; 
         }
 
         public void startFreezung()
         {
-            freezingTimer.Stop();
+            freezingTimer.Start();
         }
 
         public void stopFreezung()
         {
-            freezingTimer.Start();
+            freezingTimer.Stop();
         }
 
     }

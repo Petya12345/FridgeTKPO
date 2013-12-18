@@ -27,7 +27,7 @@ namespace Refridgerator
 
         private void removeButton_Click(object sender, EventArgs e)
         {
-            var article = fridge.GetFromBox(boxNumber, this.barcodeTextBox.Text);
+            var article = fridge.GetFromBox(boxNumber-1, this.barcodeTextBox.Text);
             if (article == null)
             {
                 MessageBox.Show("Article not found");

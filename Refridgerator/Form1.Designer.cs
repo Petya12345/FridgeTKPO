@@ -108,8 +108,10 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(39, 26);
             this.button4.TabIndex = 16;
+            this.button4.Tag = "1";
             this.button4.Text = "t";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.temperatureButton_Click);
             // 
             // defrostButton1
             // 
@@ -148,6 +150,7 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(39, 26);
             this.button7.TabIndex = 20;
+            this.button7.Tag = "2";
             this.button7.Text = "t";
             this.button7.UseVisualStyleBackColor = true;
             // 
@@ -190,6 +193,7 @@
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(39, 26);
             this.button11.TabIndex = 24;
+            this.button11.Tag = "3";
             this.button11.Text = "t";
             this.button11.UseVisualStyleBackColor = true;
             // 
@@ -232,6 +236,7 @@
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(39, 26);
             this.button15.TabIndex = 28;
+            this.button15.Tag = "4";
             this.button15.Text = "t";
             this.button15.UseVisualStyleBackColor = true;
             // 
@@ -274,6 +279,7 @@
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(39, 26);
             this.button19.TabIndex = 32;
+            this.button19.Tag = "5";
             this.button19.Text = "t";
             this.button19.UseVisualStyleBackColor = true;
             // 
@@ -316,6 +322,7 @@
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(39, 26);
             this.button23.TabIndex = 36;
+            this.button23.Tag = "6";
             this.button23.Text = "t";
             this.button23.UseVisualStyleBackColor = true;
             // 

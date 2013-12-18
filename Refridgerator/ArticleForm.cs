@@ -23,7 +23,7 @@ namespace Refridgerator
         private void putButton_Click(object sender, EventArgs e)
         {
             var article = new Article() { Title = titleTextBox.Text, Barcode = barcodeTextBox.Text };
-            fridge.PutInBox(boxNumber, article);
+            fridge.PutInBox(boxNumber -1, article);
             this.Close();
         }
 

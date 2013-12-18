@@ -9,11 +9,23 @@ using System.Windows.Forms;
 
 namespace Refridgerator
 {
-    public partial class TemperatureSetForm : Form
+    partial class TemperatureSetForm : Form
     {
-        public TemperatureSetForm()
+        Box box;
+        Fridge fridge;
+        public TemperatureSetForm(Fridge fridge, Box box)
         {
+            this.box = box;
+            this.fridge = fridge;
+
             InitializeComponent();
+        }
+
+        public void Databind()
+        {
+            this.minTemperatureControl.DataBindings.Add("Value", box, "minTemperature");
+            this.maxTemperatureControl.DataBindings.Add("Value", box, "maxTemperature");
+            this.lblCurrentTemperature.DataBindings.Add("Text", box, "currentTemperature");
         }
 
         private void okButton_Click(object sender, EventArgs e)

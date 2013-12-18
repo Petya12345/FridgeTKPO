@@ -85,7 +85,7 @@ namespace Refridgerator
             if (button != null)
             {
                 var boxNumber = Convert.ToInt32(button.Tag);
-                var articles = fridge.getArticleListInBox(boxNumber);
+                var articles = fridge.getArticleListInBox(boxNumber -1);
                 var productListForm = new ProductsListForm();
                 productListForm.DataBindItems(articles);
                 productListForm.Show();
@@ -99,6 +99,19 @@ namespace Refridgerator
             {
                 var boxNumber = Convert.ToInt32(button.Tag);
                 fridge.DefrostBox(boxNumber - 1);
+            }
+        }
+
+        private void temperatureButton_Click(object sender, EventArgs e)
+        {
+            var button = sender as Button;
+            if (button != null)
+            {
+                var boxNumber = Convert.ToInt32(button.Tag) -1;
+                var box = fridge.Boxes[boxNumber];
+                var temperatureSetForm = new TemperatureSetForm(fridge, box);
+                temperatureSetForm.Databind();
+                temperatureSetForm.Show();
             }
         }
     }

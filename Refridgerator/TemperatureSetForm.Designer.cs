@@ -32,8 +32,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.maxTemperatureControl = new System.Windows.Forms.NumericUpDown();
             this.minTemperatureControl = new System.Windows.Forms.NumericUpDown();
-            this.cancelButton = new System.Windows.Forms.Button();
-            this.okButton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblCurrentTemperature = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.maxTemperatureControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minTemperatureControl)).BeginInit();
             this.SuspendLayout();
@@ -58,45 +58,53 @@
             // 
             // maxTemperatureControl
             // 
-            this.maxTemperatureControl.Location = new System.Drawing.Point(109, 32);
+            this.maxTemperatureControl.Location = new System.Drawing.Point(126, 32);
+            this.maxTemperatureControl.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
             this.maxTemperatureControl.Name = "maxTemperatureControl";
             this.maxTemperatureControl.Size = new System.Drawing.Size(75, 20);
             this.maxTemperatureControl.TabIndex = 2;
             // 
             // minTemperatureControl
             // 
-            this.minTemperatureControl.Location = new System.Drawing.Point(109, 6);
+            this.minTemperatureControl.Location = new System.Drawing.Point(126, 6);
+            this.minTemperatureControl.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
             this.minTemperatureControl.Name = "minTemperatureControl";
             this.minTemperatureControl.Size = new System.Drawing.Size(75, 20);
             this.minTemperatureControl.TabIndex = 3;
             // 
-            // cancelButton
+            // label3
             // 
-            this.cancelButton.Location = new System.Drawing.Point(25, 62);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(75, 23);
-            this.cancelButton.TabIndex = 4;
-            this.cancelButton.Text = "Cancel";
-            this.cancelButton.UseVisualStyleBackColor = true;
-            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 58);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(104, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Current Temperature";
             // 
-            // okButton
+            // lblCurrentTemperature
             // 
-            this.okButton.Location = new System.Drawing.Point(109, 62);
-            this.okButton.Name = "okButton";
-            this.okButton.Size = new System.Drawing.Size(75, 23);
-            this.okButton.TabIndex = 5;
-            this.okButton.Text = "OK";
-            this.okButton.UseVisualStyleBackColor = true;
-            this.okButton.Click += new System.EventHandler(this.okButton_Click);
+            this.lblCurrentTemperature.AutoSize = true;
+            this.lblCurrentTemperature.Location = new System.Drawing.Point(127, 60);
+            this.lblCurrentTemperature.Name = "lblCurrentTemperature";
+            this.lblCurrentTemperature.Size = new System.Drawing.Size(13, 13);
+            this.lblCurrentTemperature.TabIndex = 5;
+            this.lblCurrentTemperature.Text = "0";
             // 
             // TemperatureSetForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(197, 94);
-            this.Controls.Add(this.okButton);
-            this.Controls.Add(this.cancelButton);
+            this.ClientSize = new System.Drawing.Size(231, 82);
+            this.Controls.Add(this.lblCurrentTemperature);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.minTemperatureControl);
             this.Controls.Add(this.maxTemperatureControl);
             this.Controls.Add(this.label2);
@@ -116,7 +124,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown maxTemperatureControl;
         private System.Windows.Forms.NumericUpDown minTemperatureControl;
-        private System.Windows.Forms.Button cancelButton;
-        private System.Windows.Forms.Button okButton;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblCurrentTemperature;
     }
 }

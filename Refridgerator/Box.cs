@@ -21,7 +21,7 @@ namespace Refridgerator
         public Box()
         {
             const int CHECK_OPENED_DOOR = 120;
-            const int NORMAL_TEMP_INCREASES = 2;
+            const int NORMAL_TEMP_INCREASES = 5;
             const int CHECK_TEMP = 10;
 
 
